@@ -1,7 +1,7 @@
 package com.example.cryptoapp
 
 import LoginScreen
-import com.example.cryptoapp.ui.register.RegisterScreen
+import com.example.cryptoapp.presentation.ui.auth.components.register.RegisterScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -15,13 +15,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.cryptoapp.ui.login.LoginViewModel
-import com.example.cryptoapp.ui.main.MainScreen
-import com.example.cryptoapp.ui.main.MainViewModel
-import com.example.cryptoapp.ui.register.RegisterViewModel
-import com.example.cryptoapp.ui.splash.SplashScreen
-import com.example.cryptoapp.ui.splash.SplashViewModel
-import com.example.cryptoapp.ui.theme.CryptoAppTheme
+import com.example.cryptoapp.presentation.ui.auth.components.login.LoginViewModel
+import com.example.cryptoapp.presentation.ui.main.MainScreen
+import com.example.cryptoapp.presentation.ui.main.MainViewModel
+import com.example.cryptoapp.presentation.ui.auth.components.register.RegisterViewModel
+import com.example.cryptoapp.presentation.ui.splash.SplashScreen
+import com.example.cryptoapp.presentation.ui.splash.SplashViewModel
+import com.example.cryptoapp.presentation.ui.theme.CryptoAppTheme
 import com.example.cryptoapp.utils.Screen
 import dagger.hilt.android.AndroidEntryPoint
 
