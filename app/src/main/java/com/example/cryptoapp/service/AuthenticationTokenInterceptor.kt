@@ -7,7 +7,7 @@ import javax.inject.Singleton
 
 @Singleton
 class AuthenticationTokenInterceptor @Inject constructor(
-    private val sharedPref: MySharedPref
+    private val sharedPref: SharedPreferencesService
 ) : Interceptor {
 
     companion object {

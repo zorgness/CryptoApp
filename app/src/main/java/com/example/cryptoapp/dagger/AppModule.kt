@@ -1,10 +1,10 @@
 package com.example.cryptoapp.dagger
 
 import android.content.Context
-import com.example.cryptoapp.network.ApiRoutes
-import com.example.cryptoapp.network.ApiService
-import com.example.cryptoapp.network.ApiServiceCoin
-import com.example.cryptoapp.service.MySharedPref
+import com.example.cryptoapp.data.remote.ApiRoutes
+import com.example.cryptoapp.data.remote.ApiService
+import com.example.cryptoapp.data.remote.ApiServiceCoin
+import com.example.cryptoapp.service.SharedPreferencesService
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -33,8 +33,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideMySharedPref(context: Context): MySharedPref {
-        return MySharedPref(context)
+    fun provideMySharedPref(context: Context): SharedPreferencesService {
+        return SharedPreferencesService(context)
     }
 
     @Provides
@@ -70,6 +70,7 @@ object AppModule {
 
     @Provides
     @Singleton
+    @Named("Auth")
     fun provideRetrofitClient(
         okHttp: OkHttpClient,
         moshi: Moshi
@@ -81,10 +82,12 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideApiService(@Named("Auth") retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+    fun provideApiService(@Named("Auth") retrofit: Retrofit): ApiService = retrofit.create(
+        ApiService::class.java)
 
     @Provides
     @Singleton
+    @Named("Coin")
     fun provideRetrofitClient2(
         okHttp: OkHttpClient,
         moshi: Moshi
@@ -96,6 +99,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideApiService2(@Named("Coin") retrofit: Retrofit): ApiServiceCoin = retrofit.create(ApiServiceCoin::class.java)
+    fun provideApiService2(@Named("Coin") retrofit: Retrofit): ApiServiceCoin = retrofit.create(
+        ApiServiceCoin::class.java)
 
 }
