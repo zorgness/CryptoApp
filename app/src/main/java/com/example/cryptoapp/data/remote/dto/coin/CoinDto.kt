@@ -1,6 +1,7 @@
 package com.example.cryptoapp.data.remote.dto.coin
 
 
+import com.example.cryptoapp.domain.model.Coin
 import com.squareup.moshi.Json
 
 data class CoinDto(
@@ -19,3 +20,13 @@ data class CoinDto(
     @Json(name = "type")
     val type: String
 )
+
+fun CoinDto.toCoin(): Coin {
+    return Coin(
+        id = id,
+        name = name,
+        symbol = symbol,
+        rank = rank,
+        isActive = isActive
+    )
+}

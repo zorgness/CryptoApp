@@ -57,13 +57,13 @@ data class CoinDetailDto(
 
 fun CoinDetailDto.toCoinDetail(): CoinDetail {
     return CoinDetail(
-        id,
-        name,
-        description,
-        symbol,
-        rank,
-        isActive,
-        tags,
-        team
+        id = id,
+        name = name,
+        description =description,
+        symbol = symbol,
+        rank = rank,
+        isActive = isActive,
+        tags = tags,
+        team = team
     )
 }

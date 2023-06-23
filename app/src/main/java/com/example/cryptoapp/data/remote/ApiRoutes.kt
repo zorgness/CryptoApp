@@ -7,5 +7,5 @@ object ApiRoutes {
     const val UPDATE = "/api/users/{userId}"
     const val LOGIN = "/api/login"
 
-    const val COIN_PAPRIKA_URL = "https://api.coinpaprika.com/v1/coins"
+    const val COIN_PAPRIKA_URL = "https://api.coinpaprika.com/v1/coins/"
 }

@@ -11,12 +11,4 @@ data class Coin(
     val isActive: Boolean,
 )
 
-fun CoinDto.toCoin(): Coin {
-    return Coin(
-                id,
-                name,
-                symbol,
-                rank,
-                isActive
-            )
-}
+

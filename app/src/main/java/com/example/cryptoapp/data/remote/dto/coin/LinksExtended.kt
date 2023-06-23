@@ -8,6 +8,6 @@ data class LinksExtended(
     val url: String,
     @Json(name = "type")
     val type: String,
-    @Json(name = "stats")
-    val stats: Stats
+   /* @Json(name = "stats")
+    val stats: Stats*/
 )
