@@ -1,9 +1,8 @@
 package com.example.cryptoapp.domain.use_case.get_coins
 
 import com.example.cryptoapp.Resource
-import com.example.cryptoapp.data.remote.dto.coin.CoinDto
+import com.example.cryptoapp.data.remote.dto.coin.toCoin
 import com.example.cryptoapp.domain.model.Coin
-import com.example.cryptoapp.domain.model.toCoin
 import com.example.cryptoapp.domain.repository.CoinRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -17,10 +16,11 @@ class GetCoinsUseCase @Inject constructor(
     operator fun invoke(): Flow<Resource<List<Coin>>> = flow {
 
         try {
+
             emit(Resource.Loading())
-            repository.getCoins().map { it.toCoin() }.let { coins->
-                emit(Resource.Success(data = coins))
-            }
+            val coins = repository.getCoins().map { it.toCoin() }
+            emit(Resource.Success(data = coins))
+
 
         } catch (he: HttpException) {
 

@@ -4,6 +4,8 @@ import com.example.cryptoapp.data.remote.ApiServiceCoin
 import com.example.cryptoapp.data.remote.dto.coin.CoinDetailDto
 import com.example.cryptoapp.data.remote.dto.coin.CoinDto
 import com.example.cryptoapp.domain.repository.CoinRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class CoinRepositoryImpl @Inject constructor(
@@ -11,7 +13,7 @@ class CoinRepositoryImpl @Inject constructor(
 ): CoinRepository {
 
     override suspend fun getCoins(): List<CoinDto> {
-        return apiServiceCoin.getCoins()
+           return apiServiceCoin.getCoins()
     }
 
     override suspend fun getCoinById(coinId: String): CoinDetailDto {

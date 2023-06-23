@@ -106,7 +106,7 @@ class LoginViewModel @Inject constructor(
                                 currentState = LoginState.SUCCESS
                                 sharedPref.token = body.token
                                 sharedPref.userId = body.id
-                                _goToMainSharedFlow.emit(Screen.Main)
+                                _goToMainSharedFlow.emit(Screen.CoinList)
                             }
 
                             else -> {
