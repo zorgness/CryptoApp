@@ -3,6 +3,7 @@ package com.example.cryptoapp.presentation.ui.splash
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -46,8 +47,8 @@ fun SplashContent() {
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Splash",
-            color = Color.DarkGray,
+            text = "CryptoApp",
+            color = MaterialTheme.colors.primary,
             fontSize = 48.sp,
             fontWeight = FontWeight.Bold
         )

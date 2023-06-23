@@ -26,17 +26,13 @@ fun CoinDetailScreen(
     coinId: String
 ) {
 
+    val state = viewModel.state.value
+
     LaunchedEffect(true ) {
         viewModel.getCoin(coinId)
     }
 
-    val state = viewModel.state.value
-
-    CoinDetailContent(
-        state
-    )
-
-
+    CoinDetailContent(state)
 }
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -44,11 +40,12 @@ fun CoinDetailScreen(
 fun CoinDetailContent(
     state: CoinDetailState
 ) {
-        Box(
-            modifier = Modifier.fillMaxSize()
-        ) {
+        Box(modifier = Modifier.fillMaxSize()) {
             state.coin?.let { coin ->
-                LazyColumn(modifier = Modifier.fillMaxSize()) {
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(20.dp)
+                ) {
                     item {
                         Row(
                             modifier = Modifier.fillMaxWidth(),
@@ -84,11 +81,19 @@ fun CoinDetailContent(
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                         FlowRow(
-                           modifier = Modifier.fillMaxWidth()
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(12.dp),
+                            maxItemsInEachRow = 3
+
                         ) {
                             coin.tags.forEach { tag ->
-                                CoinTag(tag = tag.name)
 
+                                Box(
+                                    modifier = Modifier
+                                        .padding(top = 10.dp)
+                                ) {
+                                    CoinTag(tag = tag.name)
+                                }
                             }
                         }
                         Spacer(modifier = Modifier.height(16.dp))

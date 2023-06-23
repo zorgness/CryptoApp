@@ -7,9 +7,10 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = ColorPrimary,
+    background = DarkGray,
+    onBackground = TextWhite,
+    onPrimary = DarkGray
 )
 
 private val LightColorPalette = lightColors(
@@ -29,7 +30,7 @@ private val LightColorPalette = lightColors(
 
 @Composable
 fun CryptoAppTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = true, //isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
     val colors = if (darkTheme) {
