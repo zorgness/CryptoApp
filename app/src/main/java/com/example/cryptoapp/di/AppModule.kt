@@ -1,9 +1,11 @@
-package com.example.cryptoapp.dagger
+package com.example.cryptoapp.di
 
 import android.content.Context
 import com.example.cryptoapp.data.remote.ApiRoutes
 import com.example.cryptoapp.data.remote.ApiService
 import com.example.cryptoapp.data.remote.ApiServiceCoin
+import com.example.cryptoapp.data.remote.repository.CoinRepositoryImpl
+import com.example.cryptoapp.domain.repository.CoinRepository
 import com.example.cryptoapp.service.SharedPreferencesService
 
 import com.squareup.moshi.Moshi
@@ -101,5 +103,11 @@ object AppModule {
     @Singleton
     fun provideApiService2(@Named("Coin") retrofit: Retrofit): ApiServiceCoin = retrofit.create(
         ApiServiceCoin::class.java)
+
+    @Provides
+    @Singleton
+    fun provideCoinRepository(api: ApiServiceCoin): CoinRepository {
+        return CoinRepositoryImpl(api)
+    }
 
 }
