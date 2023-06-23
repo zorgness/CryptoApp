@@ -47,7 +47,6 @@ fun LoginScreen(
                 LoginViewModel.LoginState.ERROR_CONNECTION -> R.string.error_connection
                 LoginViewModel.LoginState.WRONG_CREDENTIAL -> R.string.wrong_credentials
                 LoginViewModel.LoginState.EMPTY_FIELDS -> R.string.empty_fields
-                LoginViewModel.LoginState.SECURITY_FAILURE -> R.string.security_failure
                 LoginViewModel.LoginState.ERROR_PARAM -> R.string.error_param
                 LoginViewModel.LoginState.ERROR_SERVICE -> R.string.error_service
                 LoginViewModel.LoginState.SUCCESS -> R.string.login_success
@@ -130,7 +129,7 @@ fun LoginContent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 40.dp),
-                onClick = { handleClick() }
+                onClick = { handleClick() },
             ) {
                 Text(
                     text = context.getString(R.string.connect),

@@ -27,12 +27,12 @@ data class CoinDetailDto(
     val team: List<TeamMember>,
     @Json(name = "description")
     val description: String,
-    @Json(name = "message")
+   /* @Json(name = "message")
     val message: String,
     @Json(name = "open_source")
     val openSource: Boolean,
     @Json(name = "started_at")
-    val startedAt: String,
+    val startedAt: String? = null,
     @Json(name = "development_status")
     val developmentStatus: String,
     @Json(name = "hardware_wallet")
@@ -42,8 +42,8 @@ data class CoinDetailDto(
     @Json(name = "org_structure")
     val orgStructure: String,
     @Json(name = "hash_algorithm")
-    val hashAlgorithm: String,
-    @Json(name = "links")
+    val hashAlgorithm: String,*/
+   /* @Json(name = "links")
     val links: Links,
     @Json(name = "links_extended")
     val linksExtended: List<LinksExtended>,
@@ -52,7 +52,7 @@ data class CoinDetailDto(
     @Json(name = "first_data_at")
     val firstDataAt: String,
     @Json(name = "last_data_at")
-    val lastDataAt: String
+    val lastDataAt: String*/
 )
 
 fun CoinDetailDto.toCoinDetail(): CoinDetail {

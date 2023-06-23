@@ -11,7 +11,7 @@ data class Links(
     @Json(name = "reddit")
     val reddit: List<String>,
     @Json(name = "source_code")
-    val sourceCode: List<String>,
+    val sourceCode: List<String>? = null,
     @Json(name = "website")
     val website: List<String>,
     @Json(name = "youtube")
