@@ -1,8 +1,10 @@
-const val SHAREDPREF_NAME = "skeletonCompose"
+const val SHAREDPREF_NAME = "cryptoapp"
 const val SHAREDPREF_SESSION_TOKEN = "session token"
 const val SHAREDPREF_SESSION_USER_ID = "session user id"
 
 const val USER_TOKEN = "token"
+
+const val COIN_ID = "coin id"
 
 const val HTTP_200 = 200
 const val HTTP_201 = 201
