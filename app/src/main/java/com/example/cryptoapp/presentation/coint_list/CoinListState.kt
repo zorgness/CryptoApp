@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.ui.coint_list
+package com.example.cryptoapp.presentation.coint_list
 
 import com.example.cryptoapp.domain.model.Coin
 

@@ -1,7 +1,7 @@
-package com.example.cryptoapp.presentation.ui.coin_detail
+package com.example.cryptoapp.presentation.coin_detail
 
 import CoinTag
-import com.example.cryptoapp.presentation.ui.coin_detail.components.TeamListItem
+import com.example.cryptoapp.presentation.coin_detail.components.TeamListItem
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.CircularProgressIndicator

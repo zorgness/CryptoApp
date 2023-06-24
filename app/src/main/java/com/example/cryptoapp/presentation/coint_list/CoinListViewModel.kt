@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.ui.coint_list
+package com.example.cryptoapp.presentation.coint_list
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -6,17 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cryptoapp.Resource
 import com.example.cryptoapp.data.remote.ApiServiceCoin
-import com.example.cryptoapp.data.remote.dto.coin.toCoin
 import com.example.cryptoapp.domain.use_case.get_coins.GetCoinsUseCase
 import com.example.cryptoapp.service.SharedPreferencesService
 import com.example.cryptoapp.utils.Screen
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import retrofit2.HttpException
-import java.io.IOException
 import javax.inject.Inject
 
 @HiltViewModel

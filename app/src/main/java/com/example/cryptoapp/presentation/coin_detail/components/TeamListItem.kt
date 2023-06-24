@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.ui.coin_detail.components
+package com.example.cryptoapp.presentation.coin_detail.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.ui.coin_detail
+package com.example.cryptoapp.presentation.coin_detail
 
 import com.example.cryptoapp.domain.model.CoinDetail
 

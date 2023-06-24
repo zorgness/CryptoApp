@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.cryptoapp.presentation.ui.auth.components.login.LoginViewModel
+import com.example.cryptoapp.presentation.auth.login.LoginViewModel
 import com.example.cryptoapp.utils.Screen
 import com.example.mycomposeskeleton.R
 

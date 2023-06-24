@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.ui.main
+package com.example.cryptoapp.presentation.main
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*

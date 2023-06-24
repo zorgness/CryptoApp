@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.ui.splash
+package com.example.cryptoapp.presentation.splash
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

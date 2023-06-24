@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.ui.splash
+package com.example.cryptoapp.presentation.splash
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,12 +9,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.cryptoapp.utils.Screen
-import com.example.mycomposeskeleton.R
 
 
 @Composable

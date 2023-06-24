@@ -1,10 +1,9 @@
-package com.example.cryptoapp.presentation.ui.auth.components.login
+package com.example.cryptoapp.presentation.auth.login
 
 import ERROR_400
 import ERROR_401
 import ERROR_503
 import HTTP_200
-import HTTP_304
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cryptoapp.data.remote.ApiService

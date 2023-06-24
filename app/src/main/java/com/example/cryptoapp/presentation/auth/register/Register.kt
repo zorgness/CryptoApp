@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.ui.auth.components.register
+package com.example.cryptoapp.presentation.auth.register
 
 import CustomTextField
 import android.content.Context

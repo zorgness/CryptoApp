@@ -1,15 +1,11 @@
-package com.example.cryptoapp.presentation.ui.coin_detail
+package com.example.cryptoapp.presentation.coin_detail
 
-import COIN_ID
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cryptoapp.Resource
-import com.example.cryptoapp.domain.model.CoinDetail
 import com.example.cryptoapp.domain.use_case.get_coin.GetCoinUseCase
-import com.example.cryptoapp.presentation.ui.coint_list.CoinListState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.ui.auth.components.register
+package com.example.cryptoapp.presentation.auth.register
 
 import ERROR_400
 import ERROR_503
