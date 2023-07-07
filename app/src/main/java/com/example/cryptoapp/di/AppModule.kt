@@ -2,7 +2,7 @@ package com.example.cryptoapp.di
 
 import android.content.Context
 import com.example.cryptoapp.data.remote.ApiRoutes
-import com.example.cryptoapp.data.remote.ApiService
+import com.example.cryptoapp.data.remote.ApiServiceAuth
 import com.example.cryptoapp.data.remote.ApiServiceCoin
 import com.example.cryptoapp.data.remote.repository.CoinRepositoryImpl
 import com.example.cryptoapp.domain.repository.CoinRepository
@@ -84,8 +84,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideApiService(@Named("Auth") retrofit: Retrofit): ApiService = retrofit.create(
-        ApiService::class.java)
+    fun provideApiService(@Named("Auth") retrofit: Retrofit): ApiServiceAuth = retrofit.create(
+        ApiServiceAuth::class.java)
 
     @Provides
     @Singleton

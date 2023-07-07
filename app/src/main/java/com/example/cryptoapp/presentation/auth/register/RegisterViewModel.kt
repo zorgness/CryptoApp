@@ -7,7 +7,7 @@ import HTTP_303
 import HTTP_304
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cryptoapp.data.remote.ApiService
+import com.example.cryptoapp.data.remote.ApiServiceAuth
 import com.example.cryptoapp.data.remote.dto.auth.RegisterDto
 import com.example.cryptoapp.data.remote.dto.auth.UserDto
 import com.example.cryptoapp.utils.Screen
@@ -24,7 +24,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RegisterViewModel @Inject constructor(
-    private val apiService: ApiService,
+    private val apiServiceAuth: ApiServiceAuth,
 ): ViewModel() {
 
     enum class RegisterState(val httpStatus: Int?) {
@@ -95,7 +95,7 @@ class RegisterViewModel @Inject constructor(
 
                     try {
                         withContext(Dispatchers.IO) {
-                            val responseRegister: Response<UserDto>? = apiService.register(
+                            val responseRegister: Response<UserDto>? = apiServiceAuth.register(
                                 RegisterDto(
                                     email = emailStateFlow.value,
                                     username = usernameStateFlow.value,

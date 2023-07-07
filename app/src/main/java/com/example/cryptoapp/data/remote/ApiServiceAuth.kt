@@ -5,7 +5,7 @@ import com.example.cryptoapp.data.remote.dto.auth.*
 import retrofit2.Response
 import retrofit2.http.*
 
-interface ApiService {
+interface ApiServiceAuth {
 
     @Headers("Content-Type: application/json")
     @POST(ApiRoutes.REGISTER)

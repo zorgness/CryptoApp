@@ -6,7 +6,7 @@ import ERROR_503
 import HTTP_200
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cryptoapp.data.remote.ApiService
+import com.example.cryptoapp.data.remote.ApiServiceAuth
 import com.example.cryptoapp.data.remote.dto.auth.LoginDto
 import com.example.cryptoapp.service.SharedPreferencesService
 import com.example.cryptoapp.utils.Screen
@@ -22,7 +22,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
-    private val apiService: ApiService,
+    private val apiServiceAuth: ApiServiceAuth,
     private val sharedPref: SharedPreferencesService
 ): ViewModel() {
 
@@ -87,7 +87,7 @@ class LoginViewModel @Inject constructor(
                 try {
                     withContext(Dispatchers.IO) {
                         val responseLogin =
-                            apiService.login(
+                            apiServiceAuth.login(
                                 LoginDto(
                                     email = emailStateFlow.value,
                                     password = passwordStateFlow.value
