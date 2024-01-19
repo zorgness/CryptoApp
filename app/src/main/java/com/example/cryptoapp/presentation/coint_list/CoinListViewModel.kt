@@ -16,7 +16,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CoinListViewModel @Inject constructor(
-    private val apiServiceCoin: ApiServiceCoin,
     private val getCoinsUseCase: GetCoinsUseCase,
     private val sharedPref: SharedPreferencesService
 ): ViewModel() {

@@ -22,10 +22,11 @@ class SplashViewModel @Inject constructor(
     fun initSplash() {
         viewModelScope.launch {
             delay(2000)
-            sharedPref.token?.let {
+            _goToScreen.emit(Screen.CoinList)
+            /*sharedPref.token?.let {
                 _goToScreen.emit(Screen.CoinList)
             }
-                ?:  _goToScreen.emit(Screen.Login)
+                ?:  _goToScreen.emit(Screen.Login)*/
 
         }
 
